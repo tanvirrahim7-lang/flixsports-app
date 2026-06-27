@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopZone - Phone Covers & Ladies Dress</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-truck"></i> Free Shipping on orders over ৳500</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="#"><i class="fas fa-user"></i> Login</a>
+                <a href="#"><i class="fas fa-user-plus"></i> Register</a>
+                <a href="#"><i class="fas fa-headset"></i> Help</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Shop<span class="logo-highlight">Zone</span></span>
+                </a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for phone covers, dresses..." id="searchInput">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <a href="pages/cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Navigation -->
+    <nav class="category-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="pages/phone-covers.html"><i class="fas fa-mobile-alt"></i> Phone Covers</a></li>
+                <li><a href="pages/ladies-dress.html"><i class="fas fa-tshirt"></i> Ladies Dress</a></li>
+                <li><a href="pages/cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="banner-slider">
+            <div class="banner-slide active" style="background: linear-gradient(135deg, #ff6b35, #f7c948);">
+                <div class="banner-content">
+                    <h1>Premium Phone Covers</h1>
+                    <p>Protect your phone in style - 50% OFF</p>
+                    <a href="pages/phone-covers.html" class="banner-btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="banner-slide" style="background: linear-gradient(135deg, #e91e63, #9c27b0);">
+                <div class="banner-content">
+                    <h1>Ladies Fashion Collection</h1>
+                    <p>Trendy dresses at amazing prices</p>
+                    <a href="pages/ladies-dress.html" class="banner-btn">Explore</a>
+                </div>
+            </div>
+        </div>
+        <button class="banner-nav prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="banner-nav next"><i class="fas fa-chevron-right"></i></button>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <a href="pages/phone-covers.html" class="category-card">
+                    <div class="category-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Phone Covers</h3>
+                    <p>500+ Products</p>
+                </a>
+                <a href="pages/ladies-dress.html" class="category-card">
+                    <div class="category-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Ladies Dress</h3>
+                    <p>300+ Products</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Sale Section -->
+    <section class="flash-sale">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-bolt"></i> Flash Sale</h2>
+                <div class="countdown">
+                    <span>Ends in:</span>
+                    <div class="timer">
+                        <span id="hours">05</span>:<span id="minutes">30</span>:<span id="seconds">00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-grid" id="flashSaleProducts">
+                <!-- Products loaded by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Phone Covers -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Popular Phone Covers</h2>
+                <a href="pages/phone-covers.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="product-grid" id="featuredCovers">
+                <!-- Products loaded by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Dresses -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trending Ladies Dress</h2>
+                <a href="pages/ladies-dress.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="product-grid" id="featuredDresses">
+                <!-- Products loaded by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ShopZone</h3>
+                    <p>Your one-stop shop for premium phone covers and trendy ladies fashion.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/phone-covers.html">Phone Covers</a></li>
+                        <li><a href="pages/ladies-dress.html">Ladies Dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ShopZone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
