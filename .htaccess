@@ -1,0 +1,29 @@
+# STYRIN E-Commerce .htaccess
+Options -Indexes
+DirectoryIndex index.php
+
+# Protect sensitive files
+<Files "config.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "database.sql">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Enable PHP error logging
+php_flag display_errors off
+php_flag log_errors on
+
+# Upload limits
+php_value upload_max_filesize 10M
+php_value post_max_size 12M
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
