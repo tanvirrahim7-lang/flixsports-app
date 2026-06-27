@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - ShopZone</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-truck"></i> Free Shipping on orders over ৳500</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="#"><i class="fas fa-user"></i> Login</a>
+                <a href="#"><i class="fas fa-user-plus"></i> Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">
+                    <span class="logo-text">Shop<span class="logo-highlight">Zone</span></span>
+                </a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products..." id="searchInput">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Navigation -->
+    <nav class="category-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="phone-covers.html"><i class="fas fa-mobile-alt"></i> Phone Covers</a></li>
+                <li><a href="ladies-dress.html"><i class="fas fa-tshirt"></i> Ladies Dress</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <div class="breadcrumb" id="breadcrumb">
+            <a href="../index.html">Home</a> <span>/</span> <a href="#" id="categoryLink">Category</a> <span>/</span> <strong id="productName">Product</strong>
+        </div>
+    </div>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-layout">
+                <!-- Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="mainImage" src="" alt="Product">
+                    </div>
+                    <div class="thumbnail-list" id="thumbnails">
+                        <!-- Thumbnails loaded by JS -->
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-detail-info">
+                    <h1 id="productTitle"></h1>
+                    
+                    <div class="product-rating-detail">
+                        <span class="stars" id="productStars"></span>
+                        <span id="productRating"></span>
+                        <span class="product-sold" id="productSold"></span>
+                    </div>
+
+                    <div class="product-detail-price">
+                        <span id="productPrice"></span>
+                        <span class="original" id="originalPrice"></span>
+                        <span class="discount" id="discountBadge"></span>
+                    </div>
+
+                    <!-- Phone Model Selection (for phone covers) -->
+                    <div class="option-section" id="modelSection" style="display: none;">
+                        <h3><i class="fas fa-mobile-alt"></i> Phone Model</h3>
+                        <div class="option-list" id="modelOptions">
+                            <!-- Models loaded by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Size Selection (for dresses) -->
+                    <div class="option-section" id="sizeSection" style="display: none;">
+                        <h3><i class="fas fa-ruler"></i> Size</h3>
+                        <div class="option-list" id="sizeOptions">
+                            <!-- Sizes loaded by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Color Selection -->
+                    <div class="option-section" id="colorSection">
+                        <h3><i class="fas fa-palette"></i> Color: <span id="selectedColorName">Select</span></h3>
+                        <div class="color-option-list" id="colorOptions">
+                            <!-- Colors loaded by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="quantity-selector">
+                        <label>Quantity:</label>
+                        <div class="qty-controls">
+                            <button class="qty-btn" onclick="changeQty(-1)">-</button>
+                            <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="10">
+                            <button class="qty-btn" onclick="changeQty(1)">+</button>
+                        </div>
+                        <span style="font-size: 13px; color: #888;">Stock available</span>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="btn-add-cart" onclick="addToCartFromDetail()">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                        <button class="btn-buy-now" onclick="buyNow()">
+                            <i class="fas fa-bolt"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="option-section">
+                        <h3><i class="fas fa-check-circle"></i> Features</h3>
+                        <ul id="productFeatures" style="padding-left: 20px; font-size: 13px; color: #555;">
+                            <!-- Features loaded by JS -->
+                        </ul>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="option-section">
+                        <h3><i class="fas fa-info-circle"></i> Description</h3>
+                        <p id="productDescription" style="font-size: 14px; color: #555; line-height: 1.8;"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ShopZone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/product-detail.js"></script>
+</body>
+</html>
